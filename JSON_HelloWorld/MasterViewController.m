@@ -27,20 +27,38 @@
     [HUD showUIBlockingIndicatorWithText:@"Fetching JSON"];
     
     //fetch the feed
-    [JSONHTTPClient getJSONFromURLWithString:kivaURL completion:^(NSDictionary *json, JSONModelError *err) {
+    _feed = [[KivaFeed alloc] initFromURLWithString:kivaURL completion:^(JSONModel *model, JSONModelError *err) {
+       
+        //hide the loader view
+        [HUD hideUIBlockingIndicator];
         
-        if (err) {
-            NSLog(@"Some error occurred : %@",[err localizedDescription]);
-        }
+        //json fetched
+        NSLog(@" loans : %@", _feed.loans);
         
-        NSArray *loans;
-        loans = [LoanModel arrayOfModelsFromDictionaries:json[@"loans"]];
-        if (loans) {
-            NSLog(@"Loaded models successfully");
-            NSLog(@"The first loan is : %@",((LoanModel *)loans[0]).name);
-        }
+        //reload the table view
+        [self.tableView reloadData];
     }];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_feed.loans count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //create a cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    LoanModel *loan = _feed.loans[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ from %@",loan.name,loan.location.country];
+    
+    return cell;
 }
 
 
