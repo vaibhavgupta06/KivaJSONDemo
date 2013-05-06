@@ -33,6 +33,9 @@
 		09DFC57917379DE100A9208C /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC56C17379DE100A9208C /* JSONModel+networking.m */; };
 		09DFC57A17379DE100A9208C /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC56F17379DE100A9208C /* JSONKeyMapper.m */; };
 		09DFC57B17379DE100A9208C /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC57117379DE100A9208C /* JSONValueTransformer.m */; };
+		09DFC57F17379F1400A9208C /* LoanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC57E17379F1400A9208C /* LoanModel.m */; };
+		09DFC58217379F4F00A9208C /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC58117379F4E00A9208C /* LocationModel.m */; };
+		09DFC5851737A16800A9208C /* KivaFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC5841737A16800A9208C /* KivaFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,12 @@
 		09DFC56F17379DE100A9208C /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
 		09DFC57017379DE100A9208C /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		09DFC57117379DE100A9208C /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		09DFC57D17379F1400A9208C /* LoanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanModel.h; sourceTree = "<group>"; };
+		09DFC57E17379F1400A9208C /* LoanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanModel.m; sourceTree = "<group>"; };
+		09DFC58017379F4E00A9208C /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		09DFC58117379F4E00A9208C /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		09DFC5831737A16800A9208C /* KivaFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KivaFeed.h; sourceTree = "<group>"; };
+		09DFC5841737A16800A9208C /* KivaFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KivaFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,7 @@
 		09DFC51B17379D5800A9208C = {
 			isa = PBXGroup;
 			children = (
+				09DFC57C17379EFB00A9208C /* Models */,
 				09DFC52D17379D5800A9208C /* JSON_HelloWorld */,
 				09DFC52617379D5800A9208C /* Frameworks */,
 				09DFC52517379D5800A9208C /* Products */,
@@ -228,6 +238,19 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
+		09DFC57C17379EFB00A9208C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09DFC57D17379F1400A9208C /* LoanModel.h */,
+				09DFC57E17379F1400A9208C /* LoanModel.m */,
+				09DFC58017379F4E00A9208C /* LocationModel.h */,
+				09DFC58117379F4E00A9208C /* LocationModel.m */,
+				09DFC5831737A16800A9208C /* KivaFeed.h */,
+				09DFC5841737A16800A9208C /* KivaFeed.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,6 +335,9 @@
 				09DFC57917379DE100A9208C /* JSONModel+networking.m in Sources */,
 				09DFC57A17379DE100A9208C /* JSONKeyMapper.m in Sources */,
 				09DFC57B17379DE100A9208C /* JSONValueTransformer.m in Sources */,
+				09DFC57F17379F1400A9208C /* LoanModel.m in Sources */,
+				09DFC58217379F4F00A9208C /* LocationModel.m in Sources */,
+				09DFC5851737A16800A9208C /* KivaFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
